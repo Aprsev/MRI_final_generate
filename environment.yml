@@ -1,0 +1,48 @@
+# environment.yml
+# ====================
+# Mamba / Conda 环境配置文件
+# Python 3.12 + 核心依赖（包括全部主要和可选依赖）
+#
+# 用法:
+#   mamba env create -f environment.yml
+#   conda activate MRI_final
+#
+# 或增量更新:
+#   mamba env update -f environment.yml
+
+name: MRI_final
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # === 核心运行时 ===
+  - python=3.12
+  - pip
+
+  # === 科学计算 ===
+  - numpy>=1.26.0
+  - scipy>=1.13.0
+
+  # === 可视化 ===
+  - matplotlib>=3.8.0
+
+  # === DICOM / NIfTI 医学影像 ===
+  - pydicom>=2.4.0
+  - nibabel>=5.2.0
+
+  # === 机器学习（Phase 2 方案A: RandomForest） ===
+  - scikit-learn>=1.4.0
+  - joblib>=1.3.0
+
+  # === 深度学习（Phase 2 方案B: UNet，可选） ===
+  # 如需使用 UNet，取消下方注释或手动安装 PyTorch
+  # - pytorch>=2.1.0
+  # - torchvision>=0.16.0
+  # 或 CPU-only 版:
+  # pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+  # === pip 安装的依赖（暂无） ===
+  # 如需要 PyTorch（UNet 训练），请在环境创建后手动运行:
+  #   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu

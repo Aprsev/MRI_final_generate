@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.claude/
+
+# Large data files - DICOM raw data
+data/raw/All_Subjects_T1_Raw/
+
+# Archives
+data/archives/*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GAN-MAT build input/output (preprocessed)
+external/GAN-MAT_build/input/
+external/GAN-MAT_build/output/
+
+# Large simulated DWI results (npz files - regenerate as needed)
+results/simulated_dwi/
+results/deformed/
+results/variation/
+
+# Trained model files (large .pth and .pkl)
+models/
+
+# Large model files (*.pth, *.pkl)
+*.pth
+*.pkl
+*.mgz
