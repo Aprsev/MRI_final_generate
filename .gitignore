@@ -43,7 +43,16 @@ results/variation/
 # Trained model files (large .pth and .pkl)
 models/
 
-# Large model files (*.pth, *.pkl)
+# Large model files (*.pth, *.pkl, *.pt)
 *.pth
 *.pkl
+*.pt
 *.mgz
+
+# DKI checkpoint files (large, can be re-trained)
+dki/outputs/*/checkpoints/
+dki/data/
+*.zip
+*.h5
+results/
+data/

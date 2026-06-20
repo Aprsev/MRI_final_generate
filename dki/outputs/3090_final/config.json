@@ -1,0 +1,50 @@
+{
+  "data_source": "phase2",
+  "phase2_root": "/root/dki_pipeline/data/03_Phase2_UNet_Synthesis",
+  "phase2_max_files": 200,
+  "phase2_noise_levels": [
+    0.01,
+    0.03,
+    0.05,
+    0.08
+  ],
+  "samples": 240,
+  "train": 160,
+  "val": 40,
+  "size": 48,
+  "bvals": [
+    0,
+    500,
+    1000,
+    1500,
+    2000
+  ],
+  "noise_levels": [
+    0.01,
+    0.03,
+    0.05,
+    0.08
+  ],
+  "seeds": [
+    42,
+    123,
+    514
+  ],
+  "epochs": 50,
+  "d_max": 0.0035,
+  "k_max": 2.0,
+  "voxel_methods": [
+    "supervised",
+    "pinn_log",
+    "pinn_log_rician"
+  ],
+  "cnn_methods": [],
+  "batch_size": 32768,
+  "lr": 0.001,
+  "cnn_batch_size": 2,
+  "cnn_lr": 0.0005,
+  "device": "auto",
+  "save_maps": true,
+  "cross_eval": true,
+  "output_root": "/root/dki_pipeline/outputs"
+}
